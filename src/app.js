@@ -15,7 +15,9 @@ app.delete("/user", (req, res) => {
   console.log("Hey this is delete method for user");
   res.send("DELETE Success");
 });
-app.use((req, res) => {
+app.use("/home/:id/:name", (req, res) => {
+  console.log(req.query);
+  console.log(req.params);
   res.send("Hello port 3000!!!!!!!hi");
 });
 
